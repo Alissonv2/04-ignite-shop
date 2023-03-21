@@ -1,25 +1,35 @@
-import { styled } from "../styles"
+import Image from "next/image"
+import { HomeContainer, Product } from "../styles/pages/home"
 
-const Button = styled('button', {
-  backgroundColor: '$green500',
-  borderRadius: 4,
-  border: 0,
-  padding: '4px 8px',
-  cursor: 'pointer',
+import Shirt1 from '../assets/Shirts/Shirt-1.png'
+import Shirt2 from '../assets/Shirts/Shirt-2.png'
+import Shirt3 from '../assets/Shirts/Shirt-3.png'
+import Shirt4 from '../assets/Shirts/Shirt-4.png'
 
-  span: {
-    fontWeight: 'bold'
-  },
-
-  '&:hover': {
-    filter: 'brightness(0.8)'
-  },
-})
 
 export default function Home() {
   return (
-    <Button>
-      <span>Enviar</span>
-    </Button>
+    <HomeContainer>
+      <Product>
+        <Image src={Shirt1} width={520} height={480} alt="" />
+
+        <footer>
+          <strong>
+            Camiseta x
+          </strong>
+          <span>R$ 79,90</span>
+        </footer>
+      </Product>
+      <Product>
+        <Image src={Shirt2} width={520} height={480} alt="" />
+
+        <footer>
+          <strong>
+            Camiseta x
+          </strong>
+          <span>R$ 79,90</span>
+        </footer>
+      </Product>
+    </HomeContainer>
   )
 }
